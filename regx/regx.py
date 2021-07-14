@@ -1,6 +1,6 @@
 def matchOne(pattern: str, text: str) -> bool:
-    if not text: return True
-    if not pattern: return False
+    if not pattern: return True
+    if not text: return False
     if pattern == '.': return True
     return pattern == text
 
@@ -15,11 +15,4 @@ def search(pattern: str, text: str) -> bool:
     return True in [match(pattern, text[x:]) for x in range(len(text)) ]
 
 print(search("bc", "abcd"))
-
-print(matchOne('a', 'a'))
-print(matchOne('.', 'z'))
-print(matchOne('', 'h'))
-print(matchOne('a', 'b'))
-print(matchOne('p', ''))
-
 print(match('a.c', 'abc'))
